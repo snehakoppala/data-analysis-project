@@ -1,0 +1,55 @@
+# Data Analysis Project Configuration
+
+project:
+  name: Data Analysis Project
+  version: 1.0.0
+  author: Data Science Team
+  description: Comprehensive data analysis workflow
+
+paths:
+  data_raw: data/raw
+  data_processed: data/processed
+  data_external: data/external
+  notebooks: notebooks
+  src: src
+  reports: reports
+  figures: reports/figures
+
+data:
+  # Data source configuration
+  source: data/raw
+  encoding: utf-8
+  missing_value_handling:
+    strategy: mean
+    threshold: 0.5
+
+analysis:
+  # Statistical analysis settings
+  significance_level: 0.05
+  correlation_method: pearson
+  hypothesis_test: ttest
+
+ml:
+  # Machine learning configuration
+  clustering:
+    algorithms:
+      - kmeans
+      - hierarchical
+      - dbscan
+    optimal_clusters: 3
+  classification:
+    test_size: 0.2
+    random_state: 42
+    cross_validation_folds: 5
+
+visualization:
+  # Plotting configuration
+  style: seaborn
+  figure_dpi: 300
+  figure_format: png
+  color_palette: husl
+
+logging:
+  level: INFO
+  format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'  
+  
